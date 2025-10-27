@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="mask">
-    <div class="iphone">
+  <div class="container">
+    <div class="convite">
       <div class="rectangle1"></div>
       <div class="ellipse1"></div>
       <div class="rectangle2"></div>
@@ -65,7 +65,7 @@
   </div>
 <script>
   function enviarWhatsApp() {
-    const numero = '553492263122'; // Código do país + DDD + número
+    const numero = '553492263122';
     const mensagem = 'Quero confirmar minha presença para o aniversario da Cecilia';
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
