@@ -3,12 +3,21 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Não aparece barra de rolagem */
+  overflow: hidden;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Luckiest Guy', cursive;
+}
+
+.mask {
+  width: 430px;
+  height: 900px;
+  overflow: hidden;            /* Corta qualquer conteúdo fora do cartão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .iphone {
@@ -17,21 +26,17 @@ html, body {
   position: relative;
   background: transparent;
   box-shadow: 0 0 8px rgba(0,0,0,0.08);
-  overflow: hidden; /* <-- ESTA LINHA FAZ MILAGRE! */
-}
-
-@media (max-width: 430px), (max-height: 900px) {
-  .iphone {
-    transform: scale(
-      calc(
-        min(
-          100vw / 430,
-          100vh / 900
-        )
+  /* ESCALA SEMPRE PRA CABER INTEIRO! */
+  transform: scale(
+    calc(
+      min(
+        100vw / 430,
+        100vh / 900
       )
-    );
-    transform-origin: center center;
-  }
+    )
+  );
+  transform-origin: center center;
+  overflow: visible;
 }
 
 /* ---------------- BACKGROUNDS ---------------- */

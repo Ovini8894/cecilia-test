@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Convite Aniversário Cecília</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Convite Aniversário Cecília</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mask">
     <div class="iphone">
       <div class="rectangle1"></div>
       <div class="ellipse1"></div>
       <div class="rectangle2"></div>
       <div class="rectangle3"></div>
       <div class="rectangle4" onclick="enviarWhatsApp()">
-    <img src="images/whiteSinglePaw.png" class="apaw">
-    <span class="btn-text">confirme sua presença!<br>clique aqui</span>
-</div>
+        <img src="images/whiteSinglePaw.png" class="apaw">
+        <span class="btn-text">confirme sua presença!<br>clique aqui</span>
+      </div>
       
       <div class="paw1"></div>
       <div class="paw2"></div>
@@ -43,36 +44,32 @@
         <span class="textPatrulha">VENHA FAZER PARTE DA MINHA PATRULHA</span>
       </div>
       
-      
       <div class="groupDate">
         <span class="day">11</span>
         <span class="month">NOVEMBRO</span>
         <span class="time">19:00 horas</span>
-      <span class="weekday">Terça-feira</span>
-    </div>
+        <span class="weekday">Terça-feira</span>
+      </div>
 
-    <div class="local">
-      Local: Deauville Buffet - Avenida Leopoldino de Oliveira, 2079 - EEUA
-    </div>
+      <div class="local">
+        Local: Deauville Buffet - Avenida Leopoldino de Oliveira, 2079 - EEUA
+      </div>
 
-  
-
-    <div class="bones">
-      <div class="pawBtn1"></div>
-      <div class="pawBtn2"></div>
-      <div class="pawBtn3"></div>
-      <div class="pawBtn4"></div>
+      <div class="bones">
+        <div class="pawBtn1"></div>
+        <div class="pawBtn2"></div>
+        <div class="pawBtn3"></div>
+        <div class="pawBtn4"></div>
+      </div>
     </div>
   </div>
-
 <script>
   function enviarWhatsApp() {
-  const numero = '553492263122'; // Código do país + DDD + número
-  const mensagem = 'Quero confirmar minha presença para o aniversario da Cecilia';
-  
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, '_blank');
-}
+    const numero = '553492263122'; // Código do país + DDD + número
+    const mensagem = 'Quero confirmar minha presença para o aniversario da Cecilia';
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  }
 </script>
 </body>
 </html>
