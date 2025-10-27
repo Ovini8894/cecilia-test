@@ -1,23 +1,36 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden; /* Não aparece barra de rolagem */
+  background: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  overflow: hidden; /* impede o usuário de mexer */
+  justify-content: center;
   font-family: 'Luckiest Guy', cursive;
 }
 
-
 .iphone {
-  transform: scale(0.85); /* diminui o tamanho geral */
-  transform-origin: top center; /* o “ponto de zoom” fica no topo */
-  width: 100%;
-  max-width: 430px;
-  height: auto;
+  width: 430px;
+  height: 900px;
+  position: relative;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 430px), (max-height: 900px) {
+  .iphone {
+    transform: scale(
+      calc(
+        min(
+          100vw / 430,
+          100vh / 900
+        )
+      )
+    );
+    transform-origin: center center;
+  }
 }
 
 /* ---------------- BACKGROUNDS ---------------- */
@@ -61,20 +74,17 @@ html, body {
   height: 80px;
   left: 151px;
   top: 797px;
-
   background-color: #C9B7E7;
   color: #fff;
   font-size: 16px;
-
   border-radius: 40px;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   cursor: pointer;
-
   display: flex;
-  align-items: center;       /* vertical */
-  justify-content: center;   /* horizontal */
-  gap: 10px;                 /* espaço entre patinha e texto */
-  padding-left: 10px;        /* pequeno espaçamento interno */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 10px;
   user-select: none;
   transition: background 0.2s, transform 0.1s;
 }
@@ -266,7 +276,7 @@ html, body {
 }
 
 .confirm {
-      position: absolute;
+    position: absolute;
     width: 228px;
     left: 190px;
     top: 820px;
@@ -289,4 +299,3 @@ html, body {
 .pawBtn2 { left: 385.54px; top: 499px; }
 .pawBtn3 { left: 346px; top: 535.75px; }
 .pawBtn4 { left: 379px; top: 532px; }
-
