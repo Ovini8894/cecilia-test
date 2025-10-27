@@ -17,6 +17,7 @@ html, body {
   position: relative;
   background: transparent;
   box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  overflow: hidden; /* <-- ESTA LINHA FAZ MILAGRE! */
 }
 
 @media (max-width: 430px), (max-height: 900px) {
