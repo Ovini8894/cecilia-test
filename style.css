@@ -1,9 +1,16 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* impede rolagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* pode trocar pela cor principal */
   font-family: 'Luckiest Guy', cursive;
 }
+
 
 .iphone {
   position: relative;
