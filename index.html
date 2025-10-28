@@ -2,23 +2,16 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite Aniversário Cecília</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="convite">
-      <div class="rectangle1"></div>
-      <div class="ellipse1"></div>
-      <div class="rectangle2"></div>
-      <div class="rectangle3"></div>
-      <div class="rectangle4" onclick="enviarWhatsApp()">
-        <img src="images/whiteSinglePaw.png" class="apaw">
-        <span class="btn-text">confirme sua presença!<br>clique aqui</span>
-      </div>
-      
+
+      <!-- PEGADAS DECORATIVAS -->
       <div class="paw1"></div>
       <div class="paw2"></div>
       <div class="paw3"></div>
@@ -29,21 +22,37 @@
       <div class="paw8"></div>
       <div class="paw9"></div>
       <div class="paw10"></div>
-      
+
+      <!-- BACKGROUNDS -->
+      <div class="rectangle1"></div>
+      <div class="ellipse1"></div>
+      <div class="rectangle2"></div>
+      <div class="rectangle3"></div>
+
+      <!-- BOTÃO WhatsApp -->
+      <div class="rectangle4" onclick="enviarWhatsApp()">
+        <img src="images/whiteSinglePaw.png" class="apaw" alt="Pata">
+        <span class="btn-text">confirme sua presença!<br>clique aqui</span>
+      </div>
+
+      <!-- PERSONAGENS -->
       <div class="everest"></div>
       <div class="skyeShield"></div>
       <div class="image1"></div>
       <div class="image2"></div>
-      <div class="pawBtn"></div>
+
+      <!-- NOME CECÍLIA -->
       <div class="ceciliabone">
-        <img src="images/BONEname.svg">
+        <img src="images/BONEname.svg" alt="Bone com nome Cecília">
       </div>
-      
+
+      <!-- TEXTO PRINCIPAL -->
       <div class="title">
         <span class="text2anos">2 anos</span>
         <span class="textPatrulha">VENHA FAZER PARTE DA MINHA PATRULHA</span>
       </div>
-      
+
+      <!-- DATA E HORÁRIO -->
       <div class="groupDate">
         <span class="day">11</span>
         <span class="month">NOVEMBRO</span>
@@ -51,25 +60,29 @@
         <span class="weekday">Terça-feira</span>
       </div>
 
+      <!-- LOCAL -->
       <div class="local">
         Local: Deauville Buffet - Avenida Leopoldino de Oliveira, 2079 - EEUA
       </div>
 
+      <!-- PEGADAS NO BOTÃO -->
       <div class="bones">
         <div class="pawBtn1"></div>
         <div class="pawBtn2"></div>
         <div class="pawBtn3"></div>
         <div class="pawBtn4"></div>
       </div>
+
     </div>
   </div>
-<script>
-  function enviarWhatsApp() {
-    const numero = '553492263122';
-    const mensagem = 'Quero confirmar minha presença para o aniversario da Cecilia';
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
-  }
-</script>
+
+  <script>
+    function enviarWhatsApp() {
+      const numero = '553492263122';
+      const mensagem = 'Quero confirmar minha presença para o aniversario da Cecilia';
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>

@@ -1,282 +1,133 @@
 html, body {
-  width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  background: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a187cc;
   font-family: 'Luckiest Guy', cursive;
-}
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* sombra preta leve */
 
 .container {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .convite {
-  width: 430px;
-  height: 900px;
+  width: 90vw;
+  aspect-ratio: 430 / 900;
   position: relative;
-  background: transparent;
+  background-color: #fff;
   box-shadow: 0 0 8px rgba(0,0,0,0.08);
-  /* Zoom inverso: sempre encaixa inteiro */
-  transform: scale(
-    calc(
-      min(100vw / 430, 100vh / 900)
-    )
-  );
-  transform-origin: center center;
   overflow: hidden;
 }
 
 /* ---------------- BACKGROUNDS ---------------- */
-.rectangle1 {
-  position: absolute;
-  width: 430px;
-  height: 455px;
-  top: -9px;
-  background: #F9C8D9;
-}
+.rectangle1 { position:absolute; width:100%; height:50.3%; top:0; background:#F9C8D9; background-image: url(images/pinkpaws.png); background-size: 90px; }
+.ellipse1 { position:absolute; width:100%; height:16.4%; top:41.3%; background:#B9DBF7; border-radius:50%; }
+.rectangle2 { position:absolute; width:100%; height:54%; top:49.5%; background:#B9DBF7; }
+.rectangle3 { position:absolute; width:100%; height:11.3%; top:65%; background:#C9B7E7; border:1px solid #9C73DF; }
 
-.ellipse1 {
-  position: absolute;
-  width: 430px;
-  height: 148px;
-  top: 372px;
-  background: #B9DBF7;
-  border-radius: 50%;
-}
-
-.rectangle2 {
-  position: absolute;
-  width: 430px;
-  height: 486px;
-  top: 446px;
-  background: #B9DBF7;
-}
-
-.rectangle3 {
-  position: absolute;
-  width: 430px;
-  height: 102px;
-  top: 583px;
-  background: #C9B7E7;
-  border: 1px solid #9C73DF;
-}
-
+/* ---------------- BOTÃO ---------------- */
 .rectangle4 {
-  position: absolute;
-  width: 268px;
-  height: 80px;
-  left: 151px;
-  top: 797px;
-  background-color: #C9B7E7;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 40px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding-left: 10px;
-  user-select: none;
-  transition: background 0.2s, transform 0.1s;
+  position:absolute;
+  width:62%;
+  height:9%;
+  left:26%;
+  top:86%;
+  background-color:#C9B7E7;
+  color:#fff;
+  border-radius:40px;
+  box-shadow:0 4px 4px rgba(0,0,0,0.25);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5%;
+  padding-left:1%;
+  user-select:none;
+  z-index:10; /* garante que fique na frente */
 }
-.rectangle4 img.apaw {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 10px;
-}
-.rectangle4 .btn-text {
-  text-align: center;
-  line-height: 1.2;
-  padding-left: 25px;
-}
-.rectangle4:hover {
-  background-color: #b49ed8;
-}
-.rectangle4.clicked {
-  background-color: #a17ac2;
-  transform: scale(0.97);
-}
+.rectangle4 img.apaw { width:10%; height:auto; }
+.rectangle4 .btn-text { text-align:center; font-size:3.5vw; }
+.rectangle4:hover { background-color:#b49ed8; }
+.rectangle4.clicked { background-color:#a17ac2; transform:scale(0.97); }
 
-/* ---------------- PAWS ---------------- */
+/* ---------------- PEGADAS ---------------- */
 [class^="paw"] {
-  position: absolute;
-  background: url("images/pinkpaws.png");
-  background-size: cover;
-  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
+  position:absolute;
+  background:url("images/pinkpaws.png") no-repeat;
+  background-size:contain;
 }
-.paw1 { width:76px; height:139px; left:-20px; top:301px; }
-.paw2 { width:91.16px; height:167px; left:314px; top:229px; }
-.paw3 { width:76px; height:139px; left:402px; top:324px; }
-.paw4 { width:76px; height:139px; left:54px; top:211px; }
-.paw5 { width:70px; height:129px; left:332px; top:-25px; transform:scaleX(-1); }
-.paw6 { width:91.16px; height:167px; left:-15px; top:-20px; }
-.paw7 { width:78px; height:143px; left:106px; top:-13px; }
-.paw8 { width:76px; height:139px; left:364px; top:124px; }
-.paw9 { width:76px; height:139px; left:229px; top:-11px; }
-.paw10 { width:69px; height:127px; left:-20px; top:153px; }
+.paw1 { width:18%; height:15%; left:0%; top:33%; }
+.paw2 { width:20%; height:18%; left:70%; top:25%; }
+.paw3 { width:18%; height:15%; left:82%; top:35%; }
+.paw4 { width:18%; height:15%; left:12%; top:23%; }
+.paw5 { width:16%; height:14%; left:70%; top:0; transform:scaleX(-1); }
+.paw6 { width:21%; height:18%; left:0; top:0; }
+.paw7 { width:18%; height:15%; left:25%; top:0; }
+.paw8 { width:18%; height:15%; left:80%; top:12%; }
+.paw9 { width:18%; height:15%; left:55%; top:0; }
+.paw10 { width:16%; height:14%; left:0; top:17%; }
 
 /* ---------------- PERSONAGENS ---------------- */
-.skyeShield {
-  position: absolute;
-  width: 304px;
-  height: 311px;
-  left: 63px;
-  top: 61px;
-  background: url("images/SKYEshiels.png");
-  background-size: cover;
-}
-.image1 {
-  position: absolute;
-  width: 383px;
-  height: 314px;
-  left: 23px;
-  top: 130px;
-  background: url("images/skyeANDeverest.png");
-  background-size: cover;
-}
-.everest {
-  position: absolute;
-  width: 127px;
-  height: 130px;
-  left: -49px;
-  top: 489px;
-  background: url("images/EVERESTNOBG.png");
-  background-size: cover;
-}
-.image2 {
-  position: absolute;
-  width: 95px;
-  height: 110px;
-  left: 28px;
-  top: 777px;
-  background: url("images/SKYEJETNOBG.png");
-  background-size: cover;
-}
+.skyeShield { position:absolute; width:70%; height:34%; left:15%; top:7%; background:url("images/SKYEshiels.png") no-repeat; background-size:contain; }
+.image1 { position:absolute; width:89%; height:35%; left:5%; top:15%; background:url("images/skyeANDeverest.png") no-repeat; background-size:contain; }
+.everest { position:absolute; width:25%; height:14%; left:-5%; top:55%; background:url("images/EVERESTNOBG.png") no-repeat; background-size:contain; }
+.image2 { position:absolute; width:15%; height:12%; left:7%; top:86%; background:url("images/SKYEJETNOBG.png") no-repeat; background-size:contain; }
+
+/* ---------------- CECILIA ---------------- */
 .ceciliabone {
-  position: absolute;
-  left: -55px;
-  top: 270px;
+  position: absolute; /* a div que segura o osso precisa ser absoluta */
+  width: 105%;
+  height: auto;
+  top: 34%; /* ou ajuste a posição */
+  left: 50%;
+  transform: translateX(-50%); /* move a div para esquerda metade da própria largura */
+  z-index: 0; /* garante que fique atrás dos textos */
 }
 
-/* ---------------- TEXTO PRINCIPAL ---------------- */
-.text2anos {
-  position: absolute;
-  width: 155px;
-  height: 44px;
-  left: 137px;
-  top: 455px;
-  font-size: 48px;
-  line-height: 48px;
-  color: #fff;
-}
-.textPatrulha {
-  position: absolute;
-  width: 262px;
-  height: 85px;
-  left: 84px;
-  top: 508px;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
-  color: #fff;
+.ceciliabone img {
+  width: 100%;
+  height: auto;
+  display: block; /* substitui o display:absolute que estava errado */
 }
 
-/* ---------------- NOME CECILIA ---------------- */
-.textCecilia span {
-  position: absolute;
-  font-family: 'Luckiest Guy';
-  font-size: 48px;
-  color: #ffffff;
-  line-height: 48px;
-}
-.c1 { left:130px; top:371px; transform:rotate(-4.64deg); }
-.e1 { left:160.9px; top:369.78px; transform:rotate(-2.95deg); }
-.c2 { left:190.85px; top:369px; transform:rotate(-1.26deg); }
-.i1 { left:221.55px; top:369.01px; transform:rotate(0.17deg); }
-.l1 { left:241.21px; top:369.1px; transform:rotate(1.52deg); }
-.i2 { left:267.86px; top:369.94px; transform:rotate(2.86deg); }
-.a1 { left:287.44px; top:370.96px; transform:rotate(4.47deg); }
+/* ---------------- TEXTO ---------------- */
+.text2anos { position:absolute; width:36%; top:51%; left:32%; font-size:8vw; color:#fff; text-align:center; }
+.textPatrulha { position:absolute; width:60%; top:57%; left:20%; font-size:5.5vw; color:#fff; text-align:center; }
 
 /* ---------------- DATA ---------------- */
-.day {
-  position: absolute;
-  left: -164px;
-  top: 569px;
-  width: 556px;
-  font-family: 'Fredoka One';
-  font-size: 80px;
-  text-align: center;
-  color: #fff;
-}
-.month {
-  position: absolute;
-  left: 16.39px;
-  top: 646.33px;
-  width: 212.35px;
-  font-family: 'Fredoka One';
-  font-size: 32px;
-  color: #fff;
-  text-align: center;
-}
-.weekday {
-  position: absolute;
-  left: 246px;
-  top: 647.49px;
-  width: 146px;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-}
-.time {
-  position: absolute;
-  left: 260.6px;
-  top: 595px;
-  width: 116.8px;
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-}
+.day { position:absolute; left:-20%; top:67%; width:100%; font-size:10vw; text-align:center; color:#fff; }
+.month { position:absolute; left:-20%; top:72%; width:100%; font-size:5.5vw; text-align:center; color:#fff; }
+.time { position:absolute; left:20%; top: 68%; width:100%; font-size:5.5vw; text-align:center; color:#fff; }
+.weekday { position:absolute; left:20%; top:72%; width:100%; font-size:5.5vw; text-align:center; color:#fff; }
 
-/* ---------------- LOCAL E BOTÃO ---------------- */
+/* ---------------- LOCAL ---------------- */
 .local {
   position: absolute;
-  width: 376px;
-  left: 49px;
-  top: 715px;
-  font-size: 20px;
+  width: 90%;
+  top: 80%;
+  left: 50%;              /* coloca o ponto de referência no meio da tela */
+  transform: translateX(-50%); /* desloca metade da largura da própria div para centralizar */
+  font-size: 4.5vw;
   color: #fff;
-  text-align: left;
-}
-.confirm {
-  position: absolute;
-  width: 228px;
-  left: 190px;
-  top: 820px;
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
+  text-align: center;     /* centraliza o texto dentro da div */
 }
 
-/* ---------------- PEGADAS DO BOTÃO ---------------- */
+/* ---------------- PEGADAS BOTÃO ---------------- */
 .pawBtn1, .pawBtn2, .pawBtn3, .pawBtn4 {
-  position: absolute;
-  width: 24.38px;
-  height: 23.52px;
-  background: url("images/whiteSinglePaw.png");
-  background-size: cover;
-  transform: rotate(35deg);
+  position:absolute;
+  width:6%; height:3%;
+  background:url("images/whiteSinglePaw.png") no-repeat;
+  background-size:contain;
 }
-.pawBtn1 { left: 354.84px; top: 502.56px; }
-.pawBtn2 { left: 385.54px; top: 499px; }
-.pawBtn3 { left: 346px; top: 535.75px; }
-.pawBtn4 { left: 379px; top: 532px; }
+.pawBtn1 { left:82%; top:55%; }
+.pawBtn2 { left:88%; top:57%; }
+.pawBtn3 { left:80%; top:59%; }
+.pawBtn4 { left:87%; top:61%; }
